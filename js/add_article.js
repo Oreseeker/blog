@@ -4,7 +4,7 @@ function getFormData() {
     return {
         title: titleField.value,
         tags: tagsField.value,
-        description: descriptionField.value
+        description: descriptionField.value,
     };
 }
 function clearForm() {
@@ -14,7 +14,8 @@ function clearForm() {
 }
 function sendFormData(data) {
     const request = new XMLHttpRequest();
-    request.open("PUT", "http://localhost:3000/articles?id=1");
+    request.open("POST", "http://localhost:3000/articles/");
+    request.setRequestHeader("Content-Type", "application/json")
     request.onreadystatechange = function() {
         if (request.status == 200) {
             alert('Data has been sent successfully')
@@ -23,7 +24,8 @@ function sendFormData(data) {
     request.onerror = function () {
         alert("Error occured while sending the data");
     }
-    request.send(data);
+    console.log(data)
+    request.send(JSON.stringify(data));
 }
 function submitArticle() {
     const data = getFormData();
