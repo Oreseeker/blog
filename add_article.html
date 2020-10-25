@@ -16,12 +16,12 @@
 <body>
     <header>
         <div class="logo">
-            <h1><span class="logo-highlight">Web</span>Dev </h1>
+            <h1><a href="./index.html" class="logo-link"><span class="logo-highlight">Web</span>Dev </a></h1>
         </div>
     </header>
     <main class="substrate main-add-article">
         <h1>Create a new article</h1>
-        <form action="localhost:3000" method="POST">
+        <form action="/dummy" method="POST">
             <ul class="unmarked-list">
                 <li>
                     <h2><label for="article-title">Article title</label></h2>
@@ -35,9 +35,15 @@
                     <h2><label for="article-description">Description</label></h2>
                     <textarea name="" id="article-description"></textarea>
                 </li>
+                <li>
+                    <button type='button' id="send-article">
+                        Create an article
+                    </button>
+                </li>
             </ul>
         </form>
     </main>
+    <script src="js/add_article.js"></script>
 </body>
 
 </html>

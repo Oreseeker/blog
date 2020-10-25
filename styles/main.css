@@ -20,6 +20,10 @@ header {
 .logo-highlight {
     color: #f10202b9;
 }
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+}
 .article-preview::after {
     content: "";
     display: block;
@@ -85,4 +89,9 @@ header {
 #article-description {
     height: 200px;
     resize: none;
+}
+.main-add-article button {
+    padding: 5px 10px;
+    margin-top: 10px;
+    cursor: pointer;
 }
